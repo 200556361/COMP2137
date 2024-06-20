@@ -14,7 +14,7 @@ echo ""
 echo "System Information"
 echo "------------------"
 
-HOSTNAME=$(hostname) # This is the line of command to get et the hostname
+HOSTNAME=$(hostname) # This is the line of command to get the hostname
 echo "Hostname: $HOSTNAME"
 
 #The following command is to display the OS and it's version
