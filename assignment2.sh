@@ -34,9 +34,9 @@ sudo ufw --force reset   # This line of code resets UFW to default.
 
 sudo ufw allow ssh #  This code Allow SSH connections
 
-sudo ufw allow http    #This line od code allows HTTP connections.
+sudo ufw allow http    #This line of code allows HTTP connections.
 
-sudo ufw allow from 192.168.16.0/24 to any port 22   #This line of code is allowing SSH connections from  specified subnet.
+sudo ufw allow from 192.168.16.0/24 to port 22   #This line of code is allowing SSH connections from  specified subnet.
 
 sudo ufw allow 3128  # This line of code allows connects on port 3128.
 
@@ -46,25 +46,35 @@ sudo ufw --force enable #This code is enabling the firewall.
 
 users="dennis aubrey captain snibbles brownie scooter sandy perrier cindy tiger yoda"
 
-for user in $users;  #
-do
-    #  This line of code is Creating user within home directory and bash as default shell
-    sudo useradd -m -s /bin/bash "$user"
-
+for user in $users; do
+    # The following lines of code Checks if user already exists
+    if id "$user" &>/dev/null; then
+        echo "User $user already exists"
+    else
+        # The following code Creates user with home directory and bash as default shell
+        sudo useradd -m -s /bin/bash "$user"
+        echo "Created user: $user"
+    fi
     #  The following code is Generating SSH keys and setting up authorized keys.
     sudo -u "$user" bash -c '
         mkdir -p ~/.ssh
-        ssh-keygen -t rsa -f ~/.ssh/id_rsa -N ""
-        ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519 -N ""
+        if [ ! -f ~/.ssh/id_rsa ]; then
+            ssh-keygen -t rsa -f ~/.ssh/id_rsa -N ""
+            echo "Generated RSA key for $user"
+        else
+            echo "RSA key already exists for $user"
+        fi
+        if [ ! -f ~/.ssh/id_ed25519 ]; then
+            ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519 -N ""
+            echo "Generated ED25519 key for $user"
+        else
+            echo "ED25519 key already exists for $user"
+        fi
         cat ~/.ssh/*.pub > ~/.ssh/authorized_keys
         chmod 700 ~/.ssh
         chmod 600 ~/.ssh/authorized_keys
     '
-
-    echo "Created user: $user"
 done
-
-
 sudo usermod -aG sudo dennis  # This code is Adding Special configuration for the user dennis
 echo "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIG4rT3vTt99Ox5kndS4HmgTrKBT8SKzhK4rhGkEVGlCI student@generic-vm" | sudo tee -a /home/dennis/.ssh/authorized_keys
 
