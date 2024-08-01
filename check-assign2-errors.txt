@@ -1,0 +1,94 @@
+--2024-08-01 11:05:01--  https://zonzorp.github.io/COMP2137/makecontainers.sh
+Resolving zonzorp.github.io (zonzorp.github.io)... 185.199.110.153, 185.199.111.153, 185.199.109.153, ...
+Connecting to zonzorp.github.io (zonzorp.github.io)|185.199.110.153|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 13970 (14K) [application/x-sh]
+Saving to: ‘/home/sushant/makecontainers.sh’
+
+     0K .......... ...                                        100% 15.9M=0.001s
+
+2024-08-01 11:05:01 (15.9 MB/s) - ‘/home/sushant/makecontainers.sh’ saved [13970/13970]
+
+WARNING:root:Cannot call Open vSwitch: ovsdb-server.service is not running.
+dpkg-preconfigure: unable to re-open stdin: No such file or directory
+Warning: Permanently added 'server1-mgmt' (ED25519) to the list of known hosts.
+
+** (generate:231): WARNING **: 15:06:44.973: Permissions for /etc/netplan/00-installer-config.yaml are too open. Netplan configuration should NOT be accessible by others.
+WARNING:root:Cannot call Open vSwitch: ovsdb-server.service is not running.
+
+** (process:229): WARNING **: 15:06:45.681: Permissions for /etc/netplan/00-installer-config.yaml are too open. Netplan configuration should NOT be accessible by others.
+
+** (process:229): WARNING **: 15:06:46.263: Permissions for /etc/netplan/00-installer-config.yaml are too open. Netplan configuration should NOT be accessible by others.
+
+** (process:229): WARNING **: 15:06:46.264: Permissions for /etc/netplan/00-installer-config.yaml are too open. Netplan configuration should NOT be accessible by others.
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+debconf: unable to initialize frontend: Dialog
+debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.34.0 /usr/local/share/perl/5.34.0 /usr/lib/x86_64-linux-gnu/perl5/5.34 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.34 /usr/share/perl/5.34 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7, <> line 42.)
+debconf: falling back to frontend: Teletype
+dpkg-preconfigure: unable to re-open stdin: 
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+debconf: unable to initialize frontend: Dialog
+debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+dpkg-preconfigure: unable to re-open stdin: 
+ERROR: Wrong number of arguments
+Error: You don't have the needed permissions to talk to the incus daemon (socket path: /var/lib/incus/unix.socket)
+Error: You don't have the needed permissions to talk to the incus daemon (socket path: /var/lib/incus/unix.socket)
+Error: You don't have the needed permissions to talk to the incus daemon (socket path: /var/lib/incus/unix.socket)
+Error: You don't have the needed permissions to talk to the incus daemon (socket path: /var/lib/incus/unix.socket)
+Error: You don't have the needed permissions to talk to the incus daemon (socket path: /var/lib/incus/unix.socket)
+Error: You don't have the needed permissions to talk to the incus daemon (socket path: /var/lib/incus/unix.socket)
+Error: You don't have the needed permissions to talk to the incus daemon (socket path: /var/lib/incus/unix.socket)
+Error: You don't have the needed permissions to talk to the incus daemon (socket path: /var/lib/incus/unix.socket)
+Error: You don't have the needed permissions to talk to the incus daemon (socket path: /var/lib/incus/unix.socket)
+Error: You don't have the needed permissions to talk to the incus daemon (socket path: /var/lib/incus/unix.socket)
+Error: You don't have the needed permissions to talk to the incus daemon (socket path: /var/lib/incus/unix.socket)
+
+** (generate:3762): WARNING **: 15:09:04.072: Permissions for /etc/netplan/00-installer-config.yaml are too open. Netplan configuration should NOT be accessible by others.
+WARNING:root:Cannot call Open vSwitch: ovsdb-server.service is not running.
+
+** (process:3760): WARNING **: 15:09:04.921: Permissions for /etc/netplan/00-installer-config.yaml are too open. Netplan configuration should NOT be accessible by others.
+
+** (process:3760): WARNING **: 15:09:05.487: Permissions for /etc/netplan/00-installer-config.yaml are too open. Netplan configuration should NOT be accessible by others.
+
+** (process:3760): WARNING **: 15:09:05.488: Permissions for /etc/netplan/00-installer-config.yaml are too open. Netplan configuration should NOT be accessible by others.
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+ERROR: Wrong number of arguments
+Error: You don't have the needed permissions to talk to the incus daemon (socket path: /var/lib/incus/unix.socket)
+Error: You don't have the needed permissions to talk to the incus daemon (socket path: /var/lib/incus/unix.socket)
+Error: You don't have the needed permissions to talk to the incus daemon (socket path: /var/lib/incus/unix.socket)
+Error: You don't have the needed permissions to talk to the incus daemon (socket path: /var/lib/incus/unix.socket)
+Error: You don't have the needed permissions to talk to the incus daemon (socket path: /var/lib/incus/unix.socket)
+Error: You don't have the needed permissions to talk to the incus daemon (socket path: /var/lib/incus/unix.socket)
+Error: You don't have the needed permissions to talk to the incus daemon (socket path: /var/lib/incus/unix.socket)
+Error: You don't have the needed permissions to talk to the incus daemon (socket path: /var/lib/incus/unix.socket)
+Error: You don't have the needed permissions to talk to the incus daemon (socket path: /var/lib/incus/unix.socket)
+Error: You don't have the needed permissions to talk to the incus daemon (socket path: /var/lib/incus/unix.socket)
+Error: You don't have the needed permissions to talk to the incus daemon (socket path: /var/lib/incus/unix.socket)
