@@ -1,0 +1,74 @@
+Question:- Create a play in a playbook to install apache2 on target1. Also enable the ufw firewall and make sure it has a rule to allow ssh and another rule to allow http on port 80. These are both tcp only
+Code:- 
+
+cat > ~/my-apache-ufw-playbook.yaml <<EOF
+- name: Installing Apache2 and configuring UFW on target1
+  hosts: target1-mgmt
+  remote_user: remoteadmin
+  tasks:
+    - name: Install apache2 package
+      apt:
+        name: apache2
+        state: present
+        update_cache: yes
+    - name: Install UFW package
+      apt:
+        name: ufw
+        state: present
+        update_cache: yes
+    - name: Enabling UFW firewall
+      ufw: 
+       state: enabled
+    - name: Allowing SSH through UFW
+      ufw:
+        rule: allow
+        port: '22'
+        protocol: tcp
+
+    - name: Allowing HTTP through UFW Rules
+      ufw:
+        rule: allow
+        port: '80'
+        protocol: tcp
+EOF
+
+Question:- Create a play in a playbook to install mysql on target2. Also enable the ufw firewall and make sure it has a rule to allow ssh and another rule to allow mysql on port 3306. These are both tcp only.
+Code:-
+
+cat > ~/sushant-mysql-ufw-playbook.yaml <<EOF
+- name: Install MySQL and configure UFW on target2
+  hosts: target2-mgmt
+  remote_user: remoteadmin
+  tasks:
+    - name: Installing MySQL server
+      apt:
+        name: mysql-server
+        state: present
+        update_cache: yes
+
+    - name: Installing UFW package (if not already installed)
+      apt:
+        name: ufw
+        state: present
+        update_cache: yes
+
+    - name: Enablling UFW firewall
+      ufw:
+        state: enabled
+
+    - name: Allowing SSH through UFW
+      ufw:
+        rule: allow
+        port: '22'
+        protocol: tcp
+
+    - name: Allowing MySQL through UFW
+      ufw:
+        rule: allow
+        port: '3306'
+        protocol: tcp
+EOF
+
+Screenshots:-
+Look At BlackBoard
+
